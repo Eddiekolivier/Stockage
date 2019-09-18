@@ -3,52 +3,44 @@
         "key":"24", //标示KEY
         "url": "https://www.24fa.top", //域名，主要用于组合链接
         "tags": [ //分类列表
-                {"name": "2019-01", "url": "https://www.24fa.top/MeiNv/2019-01/"},
-                {"name": "2019-02", "url": "https://www.24fa.top/MeiNv/2019-02/"},
-                {"name": "2019-03", "url": "https://www.24fa.top/MeiNv/2019-03/"},
-                {"name": "2019-04", "url": "https://www.24fa.top/MeiNv/2019-04/"},
-                {"name": "2019-05", "url": "https://www.24fa.top/MeiNv/2019-05/"},
-                {"name": "2019-06", "url": "https://www.24fa.top/MeiNv/2019-06/"},
-                {"name": "2019-07", "url": "https://www.24fa.top/MeiNv/2019-07/"},
-                {"name": "2019-08", "url": "https://www.24fa.top/MeiNv/2019-08/"},
-                {"name": "2019-09", "url": "https://www.24fa.top/MeiNv/2019-09/"},
-                {"name": "2019-10", "url": "https://www.24fa.top/MeiNv/2019-10/"},
-                {"name": "2019-11", "url": "https://www.24fa.top/MeiNv/2019-11/"},              
-                {"name": "2019-12", "url": "https://www.24fa.top/MeiNv/2019-12/"},  //name:分类名称, url:分类地址
+                {"name": "2019-01", "url": "https://www.24fa.top/MeiNv/"} //name:分类名称, url:分类地址
         ], 
         "pages": {
-            "element": "#pins > li", 
+            "element": "body > div.container > div.center > div > div.news_bom > div.news_bom-left ul li", 
             "name": {
-                "element": "img",
-                "attr": "alt"
+                "element": "a",
+                "attr": "title"
             },
             "url": {
-                "element": "span a",
+                "element": "a",
                 "attr": "href",
-                "needMerge": false
+                "needMerge": true
             },
             "nextPageUrlMode": {
-                "mode": "add",  
-                "addValue": "/page/{page}/"
+                "mode": "add", 
+                "addValue": ""
             }, 
             "lastPage": {
-                "element": ".pagination a", 
+                "element": "body > div.m > a", 
                 "minPageLength": 2, 
-                "attr": "@text", 
-                "descIndex": 2, 
-                "isNeedSplit": false, 
-                "splits": []
+                "attr": "href", 
+                "descIndex": 1, 
+                "isNeedSplit": true, 
+                "splits": [
+                    {"str":"_","index":2},
+                    {"str":".","index":0}
+                ]
             }
         }, 
         "imgs": {
-            "element": ".main-image img",
+            "element": "body > div.container > div.center > div.NEWS > div.picmainer > div.picsbox.picsboxcenter > p > a > img", 
             "nextPageUrlMode": {
                 "incrementMode": "page",
                 "mode": "add", 
-                "addValue": "/{page}"
+                "addValue": "index_{page}.html"
             }, 
             "lastPage": {
-                "element": ".pagenavi a", 
+                "element": "body > div.container > div.center > div.NEWS > div.picmainer > div.itempage > a", 
                 "minPageLength": 2, 
                 "attr": "@text", 
                 "descIndex": 2, 
