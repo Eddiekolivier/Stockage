@@ -1,9 +1,20 @@
 [{
-        "name": "图片站", //采集源站标题
-        "key":"key", //标示KEY
-        "url": "https://www.xxx.com", //域名，主要用于组合链接
+        "name": "24", //采集源站标题
+        "key":"24", //标示KEY
+        "url": "https://www.24fa.top", //域名，主要用于组合链接
         "tags": [ //分类列表
-            {"name": "女神", "url": "https://www.xxx.com/t/nvshen/"},  //name:分类名称, url:分类地址
+                {"name": "2019-01", "url": "https://www.24fa.top/MeiNv/2019-01/"},
+                {"name": "2019-02", "url": "https://www.24fa.top/MeiNv/2019-02/"},
+                {"name": "2019-03", "url": "https://www.24fa.top/MeiNv/2019-03/"},
+                {"name": "2019-04", "url": "https://www.24fa.top/MeiNv/2019-04/"},
+                {"name": "2019-05", "url": "https://www.24fa.top/MeiNv/2019-05/"},
+                {"name": "2019-06", "url": "https://www.24fa.top/MeiNv/2019-06/"},
+                {"name": "2019-07", "url": "https://www.24fa.top/MeiNv/2019-07/"},
+                {"name": "2019-08", "url": "https://www.24fa.top/MeiNv/2019-08/"},
+                {"name": "2019-09", "url": "https://www.24fa.top/MeiNv/2019-09/"},
+                {"name": "2019-10", "url": "https://www.24fa.top/MeiNv/2019-10/"},
+                {"name": "2019-11", "url": "https://www.24fa.top/MeiNv/2019-11/"},              
+                {"name": "2019-12", "url": "https://www.24fa.top/MeiNv/2019-12/"},  //name:分类名称, url:分类地址
         ], 
         "pages": { //外层页面采集规则
             "element": "body > div.main > div.boxs > ul > li",  //元素selector
